@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 KINGZ | Official Premium Sportswear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #111;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 1000;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; /* Adjust height based on your image */
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #111;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            margin: 0 20px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff4500; /* Subtle hover color */
+        }
+
+        /* Hero Banner */
+        .hero {
+            height: 70vh;
+            background: #000; /* Fallback color */
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 12px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Product Section */
+        .products {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            text-align: center;
+            background: #f9f9f9;
+            padding-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 350px;
+            background: #ddd; /* Placeholder color */
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .product-card h3 {
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        /* Footer / Personal Details Section */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-content h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-content p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-text h1 { font-size: 2.5rem; }
+            nav ul { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">
+                <img src="logo.jpg" alt="5 KINGZ Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">MEN</a></li>
+                    <li><a href="#">WOMEN</a></li>
+                    <li><a href="#">COLLECTION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">🛒</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Rule The Game</h1>
+            <p>Premium Sportswear for Performance & Style</p>
+            <a href="#" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="products container">
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">PRODUCT IMAGE 1</div>
+                <h3>Active Training Tee</h3>
+                <p class="price">Rs. 2,500</p>
+            </div>
+            <div class="product-card">
+                <div class="product-img">PRODUCT IMAGE 2</div>
+                <h3>Pro Mesh Shorts</h3>
+                <p class="price">Rs. 1,800</p>
+            </div>
+            <div class="product-card">
+                <div class="product-img">PRODUCT IMAGE 3</div>
+                <h3>Kingz Track Jacket</h3>
+                <p class="price">Rs. 4,200</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div>
+                <h4>5 KINGZ</h4>
+                <p>Authentic Sportswear brand founded on the principles of strength, endurance, and leadership.</p>
+            </div>
+            <div>
+                <h4>CONTACT DETAILS</h4>
+                <p><strong>Founder:</strong> [Aapka Naam]</p>
+                <p><strong>Email:</strong> [Aapka Email Address]</p>
+                <p><strong>WhatsApp:</strong> [Aapka Phone Number]</p>
+                <p><strong>Location:</strong> [Aapka City/Pakistan]</p>
+            </div>
+            <div>
+                <h4>FOLLOW US</h4>
+                <p>Instagram: @5kingz_official</p>
+                <p>Facebook: 5 Kingz Apparel</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 5 KINGZ Sportswear. All Rights Reserved. Created by [Aapka Naam].
+        </div>
+    </footer>
+
+</body>
+</html>
