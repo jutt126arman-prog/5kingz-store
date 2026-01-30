@@ -3,267 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 KINGZ | Official Premium Sportswear</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    
+    <title>5KIngz | Official Manufacturer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* --- CSS STYLES --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #fff; overflow-x: hidden; }
 
-        body {
-            background-color: #ffffff;
-            color: #111;
+        /* HEADER */
+        header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 12px 5%; background: #fff; border-bottom: 1px solid #eee;
+            position: sticky; top: 0; z-index: 9999; 
         }
+        .logo img { height: 60px; display: block; }
+        nav { display: flex; gap: 15px; align-items: center; }
+        .nav-item { position: relative; padding: 10px 0; cursor: pointer; }
+        .nav-item > a { text-decoration: none; color: #111; font-weight: 700; font-size: 11px; text-transform: uppercase; }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
+        /* MEGA MENU - LARGE DESIGN */
+        .mega-menu { 
+            position: absolute; top: 100%; left: 50%; transform: translateX(-50%); 
+            width: 90vw; max-width: 1100px; background: #fff; border-top: 3px solid #cc0000; 
+            display: none; grid-template-columns: repeat(4, 1fr); padding: 30px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 10000; 
         }
+        .nav-item:hover .mega-menu { display: grid; }
+        .menu-col h4 { font-size: 12px; text-transform: uppercase; margin-bottom: 12px; border-bottom: 2px solid #f5f5f5; padding-bottom: 5px; font-weight: 800; color: #000; }
+        .menu-col ul { list-style: none; }
+        .menu-col li { font-size: 11px; color: #555; margin-bottom: 7px; cursor: pointer; }
+        .menu-col li a { text-decoration: none; color: inherit; display: block; }
+        .menu-col li:hover { color: #cc0000; }
 
-        /* Header & Navigation */
-        header {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0;
-            background: #fff;
-            z-index: 1000;
+        .custom-order-btn { background: #000; color: #fff; padding: 10px 15px; text-decoration: none; font-weight: bold; font-size: 10px; border-radius: 4px; text-transform: uppercase; }
+
+        /* HERO GRID - CLICKABLE BOXES */
+        .hero-grid { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; height: 500px; background: #fff; }
+        .grid-box { 
+            position: relative; overflow: hidden; display: flex; flex-direction: column; 
+            align-items: center; justify-content: flex-start; padding-top: 30px; 
+            border-right: 1px solid #fff; text-decoration: none; transition: 0.3s;
         }
-
-        .nav-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .grid-box:hover { opacity: 0.95; }
+        .grid-box h2 { 
+            position: relative; z-index: 10; font-size: 22px; font-weight: 900; 
+            text-transform: uppercase; color: #111; text-align: center;
+            background: rgba(255,255,255,0.8); padding: 5px 15px; border-radius: 2px;
         }
+        .grid-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 
-        .logo img {
-            height: 50px; /* Adjust height based on your image */
-            display: block;
+        /* SERVICE BAR */
+        .service-bar { display: grid; grid-template-columns: repeat(4, 1fr); background: #f8f6f4; padding: 35px 5%; border-top: 1px solid #eee; }
+        .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; border-right: 1px solid #ddd; }
+        .service-item:last-child { border-right: none; }
+        .service-item i { font-size: 22px; color: #333; margin-bottom: 10px; }
+        .service-item h4 { font-size: 12px; text-transform: uppercase; font-weight: 800; }
+
+        /* FOOTER */
+        footer { 
+            display: grid; grid-template-columns: 1fr 1fr 1fr; 
+            padding: 60px 8%; background: #fff; gap: 50px; 
+            border-top: 1px solid #eee; align-items: start;
         }
+        .footer-col h3 { font-size: 16px; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; }
+        .footer-col p { font-size: 13px; color: #444; margin-bottom: 15px; display: flex; align-items: center; gap: 12px; }
+        .footer-col i { color: #cc0000; width: 15px; text-align: center; }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
+        .footer-col input, .footer-col textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; font-size: 12px; outline: none; background: #fafafa; }
+        .footer-col button { width: 100%; padding: 12px; background: #000; color: #fff; border: none; font-weight: bold; cursor: pointer; text-transform: uppercase; }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #111;
-            font-weight: bold;
-            font-family: 'Oswald', sans-serif;
-            margin: 0 20px;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
+        .social-icons { display: flex; gap: 12px; margin-top: 20px; }
+        .social-icons a { width: 38px; height: 38px; background: #f4f4f4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #333; text-decoration: none; font-size: 18px; transition: 0.3s; }
+        .social-icons a:hover { background: #cc0000; color: #fff; }
 
-        nav ul li a:hover {
-            color: #ff4500; /* Subtle hover color */
-        }
+        /* BOTTOM BAR */
+        .bottom-bar { padding: 25px 8%; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .bottom-bar .copy { font-size: 11px; color: #888; }
+        .bottom-bar img { height: 18px; margin-right: 15px; vertical-align: middle; }
 
-        /* Hero Banner */
-        .hero {
-            height: 70vh;
-            background: #000; /* Fallback color */
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        .hero-text h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 4rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: #fff;
-            color: #000;
-            padding: 12px 35px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            text-transform: uppercase;
-        }
-
-        /* Product Section */
-        .products {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            text-align: center;
-            background: #f9f9f9;
-            padding-bottom: 20px;
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .product-img {
-            width: 100%;
-            height: 350px;
-            background: #ddd; /* Placeholder color */
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #666;
-        }
-
-        .product-card h3 {
-            font-family: 'Oswald', sans-serif;
-            margin-bottom: 5px;
-        }
-
-        .price {
-            color: #e63946;
-            font-weight: bold;
-        }
-
-        /* Footer / Personal Details Section */
-        footer {
-            background: #111;
-            color: #fff;
-            padding: 60px 0 30px;
-            margin-top: 50px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-content h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .footer-content p {
-            color: #ccc;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid #333;
-            margin-top: 40px;
-            font-size: 0.8rem;
-            color: #777;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero-text h1 { font-size: 2.5rem; }
-            nav ul { display: none; } /* Simplified for mobile */
+        @media (max-width: 992px) { 
+            .hero-grid { grid-template-columns: 1fr 1fr; height: auto; }
+            .grid-box { height: 350px; }
+            footer { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container nav-flex">
-            <div class="logo">
-                <img src="logo.jpg.png" alt="5 KINGZ Logo">
+<header>
+    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo.jpg.png" alt="5kingz"></div>
+    <nav>
+        <div class="nav-item">
+            <a href="#">Sports Apparel <i class="fas fa-caret-down"></i></a>
+            <div class="mega-menu">
+                <div class="menu-col">
+                    <h4>Sports Uniform</h4>
+                    <ul>
+                        <li><a href="american-football.html">American Football Uniform</a></li>
+                        <li><a href="soccer-uniform.html">Soccer Uniform</a></li>
+                        <li><a href="paintball.html">Paintball Jersey</a></li>
+                        <li><a href="basketball.html">Basketball Uniform</a></li>
+                        <li><a href="baseball.html">Baseball Uniform</a></li>
+                        <li><a href="rugby.html">Rugby Uniform</a></li>
+                        <li><a href="cricket.html">Cricket Uniform</a></li>
+                        <li><a href="boxing.html">Boxing Uniform</a></li>
+                        <li><a href="ice-hockey.html">Ice Hockey Uniform</a></li>
+                        <li><a href="softball.html">Softball Uniform</a></li>
+                        <li><a href="volleyball.html">Volleyball Uniform</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Active Wear</h4>
+                    <ul>
+                        <li><a href="compression.html">Compression Shorts</a></li>
+                        <li><a href="fitness-bra.html">Fitness Bra</a></li>
+                        <li><a href="legging.html">Legging</a></li>
+                        <li><a href="gym-tshirts.html">Gym T-shirts</a></li>
+                        <li><a href="swimsuit.html">Swimsuit</a></li>
+                        <li><a href="tank-top.html">Tank Top</a></li>
+                        <li><a href="tracksuit.html">Tracksuit</a></li>
+                        <li><a href="workout-hoodies.html">Workout Hoodies</a></li>
+                        <li><a href="rash-guards.html">Rash Guards</a></li>
+                        <li><a href="meggings.html">Meggings</a></li>
+                        <li><a href="t-shirts-women.html">T-Shirts (Women)</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Martial Arts</h4>
+                    <ul>
+                        <li><a href="karate.html">Karate Uniform</a></li>
+                        <li><a href="bjj.html">BJJ Gi</a></li>
+                        <li><a href="mma-shorts.html">MMA Shorts</a></li>
+                        <li><a href="muay-thai.html">Muay Thai</a></li>
+                        <li><a href="judo.html">Judo Uniform</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Accessories</h4>
+                    <ul>
+                        <li><a href="sports-bag.html">Sports Bag</a></li>
+                        <li><a href="gym-belts.html">Gym Belts</a></li>
+                        <li><a href="caps.html">Caps</a></li>
+                        <li><a href="face-mask.html">Face Mask</a></li>
+                        <li><a href="socks.html">Socks</a></li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">MEN</a></li>
-                    <li><a href="#">WOMEN</a></li>
-                    <li><a href="#">COLLECTION</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
-            <div class="cart-icon">🛒</div>
         </div>
-    </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Rule The Game</h1>
-            <p>Premium Sportswear for Performance & Style</p>
-            <a href="#" class="cta-btn">Shop Now</a>
+        <div class="nav-item">
+            <a href="#">Casual Apparel <i class="fas fa-caret-down"></i></a>
+            <div class="mega-menu" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="menu-col">
+                    <h4>Casual Wear</h4>
+                    <ul>
+                        <li><a href="sweat-shirts.html">Sweat Shirts</a></li>
+                        <li><a href="hoodie.html">Hoodie</a></li>
+                        <li><a href="shorts.html">Shorts</a></li>
+                        <li><a href="polo-shirts.html">Polo Shirts</a></li>
+                        <li><a href="long-sleeve-tshirt.html">Long Sleeve T Shirt</a></li>
+                        <li><a href="t-shirts.html">T-Shirts</a></li>
+                        <li><a href="t-shirts-women.html">T-Shirt (Women)</a></li>
+                        <li><a href="hoodies-women.html">Hoodies (Women)</a></li>
+                        <li><a href="long-coat.html">Long Coat</a></li>
+                        <li><a href="tracksuit-casual.html">Track Suit</a></li>
+                        <li><a href="trousers.html">Trousers</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Jackets</h4>
+                    <ul>
+                        <li><a href="rain-jackets.html">Rain Jackets</a></li>
+                        <li><a href="puffer-jackets.html">Puffer Jackets</a></li>
+                        <li><a href="varsity-jackets.html">Varsity Jackets</a></li>
+                        <li><a href="windbreaker-jackets.html">Windbreaker Jackets</a></li>
+                        <li><a href="fleece-jackets.html">Fleece Jackets</a></li>
+                        <li><a href="softshell-jackets.html">Softshell Jackets</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Knitwear</h4>
+                    <ul>
+                        <li><a href="beanies.html">Beanies</a></li>
+                        <li><a href="sweaters.html">Sweaters</a></li>
+                        <li><a href="ski-mask.html">Ski Mask</a></li>
+                        <li><a href="wool-socks.html">Wool Socks</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <section class="products container">
-        <h2 class="section-title">New Arrivals</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-img">PRODUCT IMAGE 1</div>
-                <h3>Active Training Tee</h3>
-                <p class="price">Rs. 2,500</p>
-            </div>
-            <div class="product-card">
-                <div class="product-img">PRODUCT IMAGE 2</div>
-                <h3>Pro Mesh Shorts</h3>
-                <p class="price">Rs. 1,800</p>
-            </div>
-            <div class="product-card">
-                <div class="product-img">PRODUCT IMAGE 3</div>
-                <h3>Kingz Track Jacket</h3>
-                <p class="price">Rs. 4,200</p>
-            </div>
-        </div>
-    </section>
+        <div class="nav-item"><a href="work-wear.html">Work Wear</a></div>
+        <div class="nav-item"><a href="mailto:yasinsports643@gmail.com" style="color:#cc0000;">Contact</a></div>
+        <a href="https://wa.me/923098284636" target="_blank" class="custom-order-btn">Custom Order</a>
+    </nav>
+</header>
 
-    <footer id="contact">
-        <div class="container footer-content">
-            <div>
-                <h4>5 KINGZ</h4>
-                <p>Authentic Sportswear brand founded on the principles of strength, endurance, and leadership.</p>
-            </div>
-            <div>
-                <h4>CONTACT DETAILS</h4>
-                <p><strong>Founder:</strong> [Brothers]</p>
-                <p><strong>Email:</strong> [yasinsports643@gmail.com]</p>
-                <p><strong>WhatsApp:</strong> [+92 309 8284636]</p>
-                <p><strong>Location:</strong> [Jodhey WAli Kalan,Sialkot,Pakistan]</p>
-            </div>
-            <div>
-                <h4>FOLLOW US</h4>
-                <p>Instagram: @5kingz_official</p>
-                <p>Facebook: 5 Kingz Apparel</p>
-            </div>
+<section class="hero-grid">
+    <a href="sports-uniform-category.html" class="grid-box">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800">
+        <h2>Sports Uniform</h2>
+    </a>
+    <a href="active-wear-category.html" class="grid-box">
+        <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=800">
+        <h2>Active Wear</h2>
+    </a>
+    <a href="Casual-wear-category.html" class="grid-box">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=800">
+        <h2>Casual Wear</h2>
+    </a>
+    <a href="work-work-category.html" class="grid-box">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=800">
+        <h2>Work Wear</h2>
+    </a>
+</section>
+
+<section class="service-bar">
+    <div class="service-item"><i class="fas fa-shipping-fast"></i><h4>Fast Shipping</h4></div>
+    <div class="service-item"><i class="fas fa-award"></i><h4>Top Quality</h4></div>
+    <div class="service-item"><i class="fas fa-hand-holding-usd"></i><h4>Factory Prices</h4></div>
+    <div class="service-item" style="border:none;"><i class="fas fa-sync"></i><h4>Customization</h4></div>
+</section>
+
+<footer>
+    <div class="footer-col">
+        <h3>CONTACT INFO</h3>
+        <p><i class="fas fa-envelope"></i> yasinsports643@gmail.com</p>
+        <p><i class="fas fa-phone-alt"></i> +92 309 8284636</p>
+        <p><i class="fab fa-whatsapp"></i> +92 309 8284636</p>
+        <p><i class="fas fa-map-marker-alt"></i> Jodhay Wali Kalan, Sialkot 51310, Punjab, Pakistan</p>
+        <div class="social-icons">
+            <a href="https://facebook.com/5kingz" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/5kingz" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/923098284636" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <div class="copyright">
-            &copy; 2026 5 KINGZ Sportswear. All Rights Reserved. Created by [Aapka Naam].
-        </div>
-    </footer>
+    </div>
+    <div class="footer-col">
+        <h3>LET'S TALK</h3>
+        <input type="email" placeholder="Email Address">
+        <textarea placeholder="Your Message" rows="3"></textarea>
+        <button type="submit">SUBMIT</button>
+    </div>
+    <div class="footer-col">
+        <h3>WHAT WE DO</h3>
+        <p style="color: #666; margin-bottom: 15px;">Expert manufacturing and export of customized sports apparel with global shipping.</p>
+        <p><strong>• Customized Design</strong></p>
+        <p><strong>• Global Shipping</strong></p>
+        <p><strong>• Factory Wholesale</strong></p>
+    </div>
+</footer>
+
+<div class="bottom-bar">
+    <div class="shipping-logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Logo.svg" alt="DHL">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/FedEx_Express_logo.svg" alt="FedEx">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/UPS_logo.svg" alt="UPS">
+    </div>
+    <div class="copy">Copyright © 2026 5Kingz.</div>
+    <div class="payment-icons" style="font-size: 18px; color: #ccc;">
+        <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard" style="margin-left: 10px;"></i>
+    </div>
+</div>
 
 </body>
 </html>
